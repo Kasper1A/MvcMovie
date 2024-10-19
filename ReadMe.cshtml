@@ -1,0 +1,25 @@
+Bio Tranan vill ha två saker, dels en publik hemsida där besökare skall kunna:
+
+[x] Se schemat för kommande filmvisningar
+[x] Få grundläggande information om filmerna som ska visas
+[] Reservera platser på filmvisning
+
+Utöver detta vill Bio Tranan, som drivs av erfarna utvecklare, ha ett REST API som kan fungera som administationsverktyg
+(i framtiden tänkte de skriva sin egen frontend för detta). REST API:et skall kunna:
+
+[x] Lägga till nya filmer
+[x] Ta bort filmer
+[x] Hämta en lista på filmer (Detta är alltså inte samma som att visa schemat för visningar!)
+[x] Lägga till nya salonger med ett visst antal platser
+[] Uppdatera och ta bort salongsinformation
+[x] Lägga till nya visningar i schemat
+[x] Hämta hem schemat för alla kommande visningar
+[] Lista alla reservationer
+[] Lista alla reservationer för en viss visning
+
+Regler för systemet:
+
+[] En film får bara visas ett visst antal gånger. Det skall alltså inte gå att lägga till en film i schemat för
+visningar, om den redan visats max antal gånger.
+[] Det ska inte gå att lägga till en filmvisning i schemat samma tid som en annan film visas i samma salong
+[] Det skall inte gå att reservera platser på en visning om det inte finns tillräckligt många platser kvar

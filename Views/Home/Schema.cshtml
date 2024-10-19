@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MvcMovie.Models.Visning>
+
+@{
+    ViewData["Title"] = "Schema";
+}
+
+<h2>Schema</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>@ViewBag.Message</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Film</th>
+                <th>Datum & Tid</th>
+                <th>Salong</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var visning in Model)
+            {
+                <tr>
+                    <td>@visning.Movie.Title</td>
+                    <td>@visning.Time.ToString("yyyy-MM-dd HH:mm")</td>
+                    <td>@visning.Salong.Name</td>
+                    <td><a asp-action="Reserve" asp-route-id="@visning.Id" class="btn btn-primary btn-sm">Reserve Seats</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

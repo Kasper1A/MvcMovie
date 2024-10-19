@@ -1,0 +1,26 @@
+@model IEnumerable<MvcMovie.Models.Movie>
+
+<h1>Movies</h1>
+<table class="table">
+    <thead>
+        @* <tr>
+        <th>Title</th>
+        <th>Release Date</th>
+        <th>Actions</th>
+        </tr> *@
+    </thead>
+    <tbody>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Details" asp-route-id="@movie.Id">@movie.Title</a>
+                </td>
+                <td>@movie.Time</td>
+                <td>
+                    @* <a asp-action="Delete" asp-route-id="@movie.Id" class="btn btn-danger">Delete</a> *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
