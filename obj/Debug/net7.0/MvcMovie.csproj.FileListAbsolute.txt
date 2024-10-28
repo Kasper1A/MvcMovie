@@ -29,7 +29,6 @@ C:\Users\GundeGås\Desktop\mvc-projekt\MvcMovie\obj\Debug\net7.0\MvcMovie.pdb
 C:\Users\GundeGås\Desktop\mvc-projekt\MvcMovie\obj\Debug\net7.0\MvcMovie.genruntimeconfig.cache
 C:\Users\GundeGås\Desktop\mvc-projekt\MvcMovie\obj\Debug\net7.0\ref\MvcMovie.dll
 C:\Users\GundeGås\Desktop\mvc-projekt\MvcMovie\obj\Debug\net7.0\scopedcss\View\Shared\_Layout.cshtml.rz.scp.css
-c:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\MvcMovie.csproj.AssemblyReference.cache
 c:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\MvcMovie.GeneratedMSBuildEditorConfig.editorconfig
 c:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\MvcMovie.AssemblyInfoInputs.cache
 c:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\MvcMovie.AssemblyInfo.cs
@@ -60,3 +59,4 @@ c:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\refint\MvcMovie.dll
 c:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\MvcMovie.pdb
 c:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\MvcMovie.genruntimeconfig.cache
 c:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\ref\MvcMovie.dll
+C:\Users\GundeGås\Desktop\MvcMovie\obj\Debug\net7.0\MvcMovie.sourcelink.json

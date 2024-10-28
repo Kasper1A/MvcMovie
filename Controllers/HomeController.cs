@@ -85,6 +85,7 @@ public class HomeController : Controller
         return View();
     }
 
+
     // POST: Action för att hantera platsreservation
     [HttpPost]
     public async Task<IActionResult> Reserve(ReservationDto model)
@@ -95,7 +96,7 @@ public class HomeController : Controller
 
             // Hämta tillgängliga platser
             var availableSeats = await _movieService.GetAvailableSeatsAsync(model.VisningsId);
-            if (model.Seats <= availableSeats)
+            if (model.Seats <= availableSeats && model.Seats != 0)
             {
                 var success = await _movieService.ReserveSeatsAsync(model.VisningsId, model.Seats);
                 if (success)
@@ -103,10 +104,12 @@ public class HomeController : Controller
                     // Generera en bekräftelsekod
                     var confirmationCode = GenerateConfirmationCode();
 
-                    // Skicka bekräftelsekoden till vyn
+                    // Spara bekräftelsekoden i TempData så att den kan användas i ReservationConfirmation-vyn
                     TempData["ConfirmationCode"] = confirmationCode;
 
                     _logger.LogInformation($"Reservation successful. Confirmation code: {confirmationCode}");
+
+                    // Omdirigera till ReservationConfirmation och skicka bekräftelsekoden
                     return RedirectToAction("ReservationConfirmation", new { code = confirmationCode });
                 }
                 else
@@ -125,16 +128,33 @@ public class HomeController : Controller
             _logger.LogWarning("Model state is invalid.");
         }
 
-        return View(model); // Återgå till vyn om något går fel
+        return View(); // Återgå till vyn om något går fel
     }
+
     // Generera en slumpmässig bekräftelsekod
     private string GenerateConfirmationCode()
     {
         Random random = new Random();
         return random.Next(100000, 999999).ToString(); // Genererar en 6-siffrig kod
     }
+    public class VisningarController : Controller
+    {
+        private readonly MovieService _movieService;
 
+        public VisningarController(MovieService movieService)
+        {
+            _movieService = movieService;
+        }
+
+        // GET: Visningar
+        public async Task<IActionResult> Index()
+        {
+            var visningar = await _movieService.GetVisningsAsync();
+            return View(visningar);
+        }
+    }
 }
+
 // Modell för reservation
 public class ReservationDto
 {

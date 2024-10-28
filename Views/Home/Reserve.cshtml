@@ -1,6 +1,6 @@
 @model MvcMovie.Controllers.ReservationDto
 
-<h1>Reserve Seats for @Model.Seats</h1>
+@* <h1>Reserve Seats for @Model.Seats</h1> *@
 
 <form asp-action="Reserve" method="post">
     <div class="form-group">
@@ -12,6 +12,6 @@
     <input type="hidden" asp-for="VisningsId" />
 
     <button type="submit" class="btn btn-primary">Reserve</button>
-    <a asp-action="Index" class="btn btn-secondary">Back to Movies</a>
+    @* <a asp-action="Index" class="btn btn-secondary">Back to Movies</a> *@
 </form>
 <p> @Html.ValidationSummary(false)</p>

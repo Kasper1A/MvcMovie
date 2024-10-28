@@ -35,3 +35,30 @@ else
         </tbody>
     </table>
 }
+
+
+<h2>Filmvisningar</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titel</th>
+            <th>Tid</th>
+            <th>Reserverade Platser</th>
+            <th>Max Platser</th>
+            @* <th>Tillgängliga Platser</th> *@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var visning in Model)
+        {
+            <tr>
+                <td>@visning.Movie.Title</td>
+                <td>@visning.Time.ToString("g")</td>
+                <td>@visning.ReservedSeats</td>
+                <td>@visning.Salong.MaxSeats</td>
+                @* <td>@</td> <!-- Tillgängliga platser --> *@
+            </tr>
+        }
+    </tbody>
+</table>

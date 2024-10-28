@@ -2,6 +2,8 @@ using MvcMovie.Controllers;
 using MvcMovie.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddHttpClient<MovieService>();
+
 
 // Lägg till MVC-tjänster
 builder.Services.AddControllersWithViews();

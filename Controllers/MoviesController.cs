@@ -62,6 +62,7 @@ namespace MvcMovie.Controllers
             return View();
         }
 
+
         // Action för att lägga till en film (POST)
         [HttpPost]
         public async Task<IActionResult> Add(Movie movie)

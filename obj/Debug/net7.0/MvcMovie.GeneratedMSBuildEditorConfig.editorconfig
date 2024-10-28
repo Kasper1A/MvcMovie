@@ -10,6 +10,8 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MvcMovie
 build_property.RootNamespace = MvcMovie
 build_property.ProjectDir = C:\Users\GundeGås\Desktop\MvcMovie\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
@@ -22,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/GundeGås/Desktop/MvcMovie/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/GundeGås/Desktop/MvcMovie/Views/Home/ReservationConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXNlcnZhdGlvbkNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/GundeGås/Desktop/MvcMovie/Views/Home/Reserve.cshtml]
@@ -42,10 +48,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/GundeGås/Desktop/MvcMovie/Views/Movies/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXFByaXZhY3kuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/GundeGås/Desktop/MvcMovie/Views/Movies/ReservationConfirmation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVzXFJlc2VydmF0aW9uQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/GundeGås/Desktop/MvcMovie/Views/Movies/Visningar.cshtml]
